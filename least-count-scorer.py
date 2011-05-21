@@ -50,15 +50,22 @@ def show_scores():
     print "*******************************************************"
     
 os.system("clear")
+print "*******************************************************"
+print "         rr0hit's least count score keeper"
+print "*******************************************************\n\n"
 limit=int(raw_input("Enter Limit :"))
 os.system("clear")
 get_players()
 
+round_num=1
 while len(players_alive)>1:
+    print "\t\tRound number "+str(round_num)+"\n"
+    print "Enter the scores:\n" 
     get_scores()
     os.system("clear")
     show_scores()
     check_alive()
+    round_num=round_num+1
         
 for p in players_alive:
     print "\n\n*******************************************************"
