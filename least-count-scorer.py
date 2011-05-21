@@ -6,8 +6,7 @@
  * http://sam.zoy.org/wtfpl/COPYING for more details. */
 '''
 
-# TODO currently 18 lines are skipped to clear space. This is machine specific. Env variable has to be read.
-
+import os
 global limit
 global num_players
 global players_alive
@@ -23,17 +22,13 @@ class player:
 
 def get_players():
     num_players=int(raw_input("Number of players :"))
-    clear_lines(18)
+    os.system("clear")
     for i in range(num_players):
         print "Name of player number "+str(i+1)
         p=player(raw_input())
-        clear_lines(18)
+        os.system("clear")
         players_alive.append(p)
 
-def clear_lines(num):
-    for i in range(num):
-        print ""
-        
 def get_scores():
     for p in players_alive:
         p.update_score(int(raw_input(p.name+" :")))
@@ -54,14 +49,14 @@ def show_scores():
         p.display()
     print "*******************************************************"
     
-clear_lines(18)
+os.system("clear")
 limit=int(raw_input("Enter Limit :"))
-clear_lines(18)
+os.system("clear")
 get_players()
 
 while len(players_alive)>1:
     get_scores()
-    clear_lines(18)
+    os.system("clear")
     show_scores()
     check_alive()
         
