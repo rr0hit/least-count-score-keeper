@@ -21,7 +21,14 @@ class player:
         print "\t\t"+self.name+" "+str(self.points)
 
 def get_players():
-    num_players=int(raw_input("Number of players :"))
+    oops=1
+    while oops==1:
+		try:
+			oops=0
+			num_players=int(raw_input("Number of players :"))
+		except ValueError:
+			oops=1
+			print "Ooops not a number !!"
     os.system("clear")
     for i in range(num_players):
         print "Name of player number "+str(i+1)
@@ -60,7 +67,14 @@ os.system("clear")
 print "*******************************************************"
 print "         rr0hit's least count score keeper"
 print "*******************************************************\n\n"
-limit=int(raw_input("Enter Limit :"))
+ooops=1
+while ooops==1:
+	try:
+		ooops=0
+		limit=int(raw_input("Enter Limit :"))
+	except ValueError:
+		ooops=1
+		print "Ooops not a number"
 os.system("clear")
 get_players()
 
