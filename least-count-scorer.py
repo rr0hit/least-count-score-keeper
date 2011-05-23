@@ -29,9 +29,16 @@ def get_players():
         os.system("clear")
         players_alive.append(p)
 
-def get_scores():
+def get_scores():	
     for p in players_alive:
-        p.update_score(int(raw_input(p.name+" :")))
+	oops=1
+	while oops==1:
+	    oops=0
+	    try:
+                p.update_score(int(raw_input(p.name+" :")))
+	    except ValueError:
+	        print "Oops not a number"
+	        oops=1
 
 def check_alive():
     for p in players_alive:
