@@ -1,7 +1,11 @@
-This is a score keeper for Least Count card game. Requires Python2.6 
-and bash. I 
-guess it does not work with Python3.
+This is a score keeper for Least Count card game. Requires Python2.6 and bash. It does not work with Python3. There is a gtk version as well as a commandline version. Only the commandline version currently supports saving states.
 
-Visit 
-http://rr0hit.wordpress.com/2011/05/21/a-simple-python-score-keeper-for-least-count-card-game/ 
-for the game rules.
+To run program for first time:
+
+	$python least-count-scorer.py
+
+To restore a saved game state :
+
+	$python least-count-scorer.py [saved-game-name]
+
+Visit http://rr0hit.wordpress.com/2011/05/21/a-simple-python-score-keeper-for-least-count-card-game/for the game rules.
